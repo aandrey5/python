@@ -31,13 +31,6 @@ age_old = age + 20
 print('Через 20 лет вам будет ', age_old)
 
 print()
-weight = float(input('Введите ваш вес с стонями грамм :) : '))
+weight = float(input('Введите ваш вес с сотнями грамм :) : '))
 print(weight)
 print(type(weight))
-
-
-
-
-
-
-
