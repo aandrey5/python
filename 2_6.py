@@ -8,7 +8,7 @@ i = 0
 while True:
     name = input('Введите название товара: ')
     price = int(input('Введите цену товара: '))
-    quantity = int(input('Введите  товара: '))
+    quantity = int(input('Введите количество товара: '))
     yes_no = input('Следующий товар : нажмите Enter или  N для завершения: ')
 
     sku = ((i + 1), dict(Название=name, Цена=price, Количество=quantity, ед='шт.'))
