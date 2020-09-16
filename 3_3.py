@@ -13,4 +13,8 @@ def myfunc(var1, var2, var3):
             continue
     print(sum(my_list))
 
-myfunc(500, 500, 500)
+a = [500, 1, 85]
+print('Вывод сумм максимальных')
+print('Такая выборка используется' , a)
+print('Итоговая сумма')
+myfunc(500, 1, 85)
