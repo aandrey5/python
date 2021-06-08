@@ -13,3 +13,27 @@ df1.dtypes
                                     
 Install pywin32 using conda install pywin32, and
 Uninstall pywin32 using pip uninstall pywin32 - not nessesary
+                                    
+                                    
+                                    
+# RUN SQL STATEMENT BY PYTHON / psycopg2
+                                    
+import psycopg2
+
+q = """
+create table log (
+       source_launch_id    int
+     , target_schema       text
+     , target_table        text  
+     , target_launch_id    int
+     , processed_dttm      timestamp default now()
+     , row_count           int
+     , duration            interval
+     , load_date           date
+)
+"""
+
+
+conn_string= "host='192.168.147.128' port=54320 dbname='my_database' user='root' password='postgres'" 
+with psycopg2.connect(conn_string) as conn, conn.cursor() as cursor:
+    cursor.execute(q)
