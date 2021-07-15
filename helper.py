@@ -1,3 +1,8 @@
+# add new column in dataframe with sourcename for next validation
+df.loc[:, 'source'] = source_name
+
+
+
 # Divide to many parts as a count of rows in chunk_size
 
 chunk_size=1080000
