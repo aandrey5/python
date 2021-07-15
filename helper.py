@@ -1,11 +1,10 @@
-# Divide CSV to many parts as a count of rows in chunk_size
+# Divide to many parts as a count of rows in chunk_size
 
 chunk_size=1080000
 batch_no=1
 for chunk in pd.read_csv('Solopharm.csv',delimiter=";", chunksize=chunk_size, low_memory=False):
-    chunk.to_csv('chunk'+str(batch_no)+'.csv',index=False)
+    chunk.to_csv('chunk'+str(batch_no)+'.csv',index=False, sep=";")
     batch_no+=1
-
 
 
 # Replace . to , in df pandas column - IN PLACE
