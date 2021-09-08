@@ -1,3 +1,8 @@
+# Groupby for text Dataframes
+
+df.groupby(['id'])['lead_id'].apply(','.join).reset_index()
+
+
 # add new column in dataframe with sourcename for next validation
 df.loc[:, 'source'] = source_name
 
